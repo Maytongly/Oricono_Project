@@ -9,15 +9,27 @@ fetch("http://localhost:3000/api/teddies")
 .then(function(teddies){
     let mainElement = document.getElementById('main')
     let HeaderElt = document.getElementById('header')
+    let FooterElt = document.getElementById ('footer')
+    let asideElt = document.getElementById('aside')
 
-    HeaderElt.innerHTML = '<div class="bg-light"><div class="text-center"><h1>Oricono</h1></div></div>'
-
+    asideElt.innerHTML = '<div><h2>Présentation de nos produit:</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Quaerat quasi deserunt autem maiores.<br/> Libero nesciunt, illum veniam harum doloremque quas vero qui reprehenderit labore nemo est quibusdam alias consequuntur necessitatibus.</p></div>'
+    
 
      teddies.forEach(teddy => {
-        mainElement.innerHTML += `<div class="card mb-3 mx-3 shadow"><div class="card-body"><h2 class="card-title"> ${teddy.name} </h2>
-        <img src ="${teddy.imageUrl}" class="card-img">
-        <p class="card-text">Price: ${teddy.price}<br/>
-        <span style="text-decoration: underline">Description:</span><br/>${teddy.description}</p></div></div>`
+        mainElement.innerHTML +=
+        `<div class="container">
+            <div class="row mb-4 ">
+                <div class="col-12 col-lg-0">
+                    <div class="card mb-4 mb-lg-0 shadow">
+                        <div class="card-body">
+                            <img src ="${teddy.imageUrl}" class="card-img">
+                            <h3 class="card-title" style="font-family: 'Architects Daughter', cursive;"> ${teddy.name} </h3>
+                            <p class="card-text">Price: ${teddy.price/100 +"€"}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
     });
 
     console.log(teddies);

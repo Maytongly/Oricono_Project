@@ -1,0 +1,27 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin: 0%;
+    background-color: rgb(192, 181, 154);
+    text-align: center;
+    height: 3em;
+    font-family: 'Architects Daughter', cursive;
+}
+#aside{
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    margin-bottom: 2%;
+    background-image: url(image/plume_beige.jpg);
+    background-position: center;
+}
+#footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(image/plume_beige_footer.jpg);
+    height: 3em;
+    font-size: 1.2rem;
+    font-family: 'Architects Daughter', cursive;
+}
