@@ -8,11 +8,9 @@ fetch("http://localhost:3000/api/teddies")
 //récupère les données du serveur
 .then(function(teddies){
     let mainElement = document.getElementById('main')
-    let HeaderElt = document.getElementById('header')
-    let FooterElt = document.getElementById ('footer')
     let asideElt = document.getElementById('aside')
 
-    asideElt.innerHTML = '<div><h2>Présentation de nos produit:</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Quaerat quasi deserunt autem maiores.<br/> Libero nesciunt, illum veniam harum doloremque quas vero qui reprehenderit labore nemo est quibusdam alias consequuntur necessitatibus.</p></div>'
+    asideElt.innerHTML = '<div class="text-center"><h2>Présentation de nos produit:</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Quaerat quasi deserunt autem maiores.<br/> Libero nesciunt, illum veniam harum doloremque quas vero qui reprehenderit labore nemo est quibusdam alias consequuntur necessitatibus.</p></div>'
     
 
      teddies.forEach(teddy => {
@@ -20,13 +18,15 @@ fetch("http://localhost:3000/api/teddies")
         `<div class="container">
             <div class="row mb-4 ">
                 <div class="col-12 col-lg-0">
+                    <a href="produit.html">
                     <div class="card mb-4 mb-lg-0 shadow">
-                        <div class="card-body">
+                        <div class="card-body" style="background-image: url(image/plume_beige.jpg);">
                             <img src ="${teddy.imageUrl}" class="card-img">
                             <h3 class="card-title" style="font-family: 'Architects Daughter', cursive;"> ${teddy.name} </h3>
-                            <p class="card-text">Price: ${teddy.price/100 +"€"}</p>
+                            <p class="card-text">Price: ${(teddy.price/100) .toFixed(2) +"€"}</p>
                         </div>
                     </div>
+                    </a>
                 </div>
             </div>
         </div>`

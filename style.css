@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -9,8 +13,6 @@ header {
     font-family: 'Architects Daughter', cursive;
 }
 #aside{
-    display: flex;
-    text-align: center;
     padding: 5%;
     margin-bottom: 2%;
     background-image: url(image/plume_beige.jpg);
@@ -20,7 +22,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url(image/plume_beige_footer.jpg);
+    background-color: rgb(192, 181, 154);
     height: 3em;
     font-size: 1.2rem;
     font-family: 'Architects Daughter', cursive;
