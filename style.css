@@ -27,3 +27,10 @@ header {
     font-size: 1.2rem;
     font-family: 'Architects Daughter', cursive;
 }
+.choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
