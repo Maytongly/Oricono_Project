@@ -29,10 +29,10 @@ function displayProduct(product){
     return  `<div class="container">
     <div class="row mb-4 ">
         <div class="col-12 col-lg-0">
-            <a href="./produit.html?id=${product._id}">
+            <a href="./produit.html?id=${product._id}" style="text-decoration: none; color:black;">
             <div class="card mb-4 mb-lg-0 shadow">
                 <div class="card-body" style="background-image: url(image/plume_beige.jpg);">
-                    <img src ="${product.imageUrl}" class="card-img">
+                    <img src ="${product.imageUrl}" class="card-img" style="border-radius:5%;">
                     <h3 class="card-title" style="font-family: 'Architects Daughter', cursive;"> ${product.name} </h3>
                     <p class="card-text">Price: ${(product.price/100) .toFixed(2) +"€"}</p>
                 </div>

@@ -11,6 +11,18 @@ header {
     text-align: center;
     height: 3em;
     font-family: 'Architects Daughter', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+ 
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    
 }
 #aside{
     padding: 5%;
@@ -21,16 +33,14 @@ header {
 #footer{
     display: flex;
     justify-content: space-around;
-    align-items: center;
     background-color: rgb(192, 181, 154);
     height: 3em;
     font-size: 1.2rem;
     font-family: 'Architects Daughter', cursive;
 }
-.choice{
+#choice{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
 }
