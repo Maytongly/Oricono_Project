@@ -21,20 +21,24 @@ fetch(`http://localhost:3000/api/teddies/${productId}`)
     mainElement.innerHTML = displayColorsProduct (data)
    
 
-    let btnElement = document.getElementById('btn')
+    let btnElement = document.getElementById('btn')//on vise l'ID btn dans le DOM
     btnElement.addEventListener('click',function(event){
         let elt = document.querySelector('select')//permet de récupérer les données de la balise select
         //alert (elt.value)
         let  product = data
         product.selectedColor = elt.value;
         console.log(product)
+
         let cart = [];//création d'un tableau cart
         if(localStorage.getItem('panier')){
             console.log('un truc dans le panier')
             cart = [...JSON.parse(localStorage.getItem('panier'))]
+            //[...] permet d'ajouter au tableau les données qui se trouvent dans le localstorage.getItem('panier')
         }
-        cart.push(product)
+
+        cart.push(product)//ajoute dans le panier le produit sélectionné
         console.log(cart)
+
         localStorage.setItem('panier', JSON.stringify(cart))//localStorage ne comprend que les chaines de caractère, c'est pour cela que l'on va utiliser Json.stringify pour transformer la chaine de caratère en OBJET.
     })
 })
